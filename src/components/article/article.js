@@ -87,6 +87,13 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: "Cedar Point's Top Thrill Dragster",
+    date: "Dec 18th, 2022",
+    firstParagraph: "Top Thrill Dragster is a hydraulically-launched steel roller coaster located at Cedar Point in Sandusky, Ohio, United States. Manufactured by Intamin and designed by Werner Stengel, it opened in 2003 as the tallest and fastest roller coaster in the world, as well as the first full-circuit roller coaster to exceed 400 feet (120 m) in height. Top Thrill Dragster reaches a height of 420 feet (130 m), a maximum speed of 120 mph (190 km/h), and features a total track length of 2,800 feet (850 m). Its records were surpassed in 2005 by Kingda Ka at Six Flags Great Adventure.",
+    secondParagraph: "Top Thrill Dragster is themed to Top Fuel drag racing, with the starting launch designed to resemble a dragstrip. The roller coaster is the second Accelerator Coaster model built by Intamin and one of two strata coasters in existence. It has also consistently ranked as one of the world's top steel coasters in the annual Golden Ticket Awards publication from Amusement Today. Following an incident in 2021 in which a guest was severely injured, the park closed the ride indefinitely, later announcing in September 2022 that Top Thrill Dragster would be retired and replaced with a new ride experience.",
+    thirdParagraph: 'On August 15, 2021, in what was described as a "serious accident", a guest waiting in line was struck by a small metal piece that dislodged from a train as it was nearing the end of its run. The guest was taken to a nearby hospital and was found to have suffered serious injuries. Cedar Point announced that the coaster would be closed for the remainder of the season. The piece was later determined to be a flag plate – an L-shaped bracket that signals the train\'s location to sensors positioned along the track. An ODA investigation later determined that half of the bolts securing the plate dislodged. The ODA required that Top Thrill Dragster be closed during the investigation and subsequent re-inspections. ODA found there was "insufficient evidence to find the action or inactions of Cedar Point violated any of the laws" and concluded its investigation in February 2022. However, Cedar Point was required to perform a list of repairs, including repairing damaged track sections and replacing "different or improper grade" bolts before ODA could certify the attraction to reopen. Despite this, the ride never reopened, and its retirement was announced on September 6, 2022.'
   }
 ];
 
@@ -140,7 +147,10 @@ function articleMaker(article) {
 }
 
 const articlesDiv = document.querySelector(".articles");
-articlesDiv.appendChild(articleMaker(data[0]));
+
+data.forEach( article => {
+  articlesDiv.appendChild(articleMaker(article));
+});
 
   /*
 
